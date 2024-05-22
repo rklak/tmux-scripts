@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-source /home/rklak/scripts/lib/colors.sh
+source /home/radoslaw-klak/scripts/lib/colors.sh
 
-/home/rklak/scripts/lib/run_watch.sh
-/home/rklak/scripts/lib/run_start.sh
+/home/radoslaw-klak/scripts/lib/run_watch.sh
+/home/radoslaw-klak/scripts/lib/run_start.sh
 
 echo_success "API is ready"

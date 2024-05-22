@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source /home/rklak/scripts/lib/colors.sh
+source /home/radoslaw-klak/scripts/lib/colors.sh
 
 pane_id="$1"
 command="$2"

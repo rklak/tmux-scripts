@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source /home/rklak/scripts/lib/colors.sh
+source /home/radoslaw-klak/scripts/lib/colors.sh
 
 echo_info "Getting remote branches list"
 local_worktree_list=$(git worktree list | grep -v -E 'master|develop|bare')

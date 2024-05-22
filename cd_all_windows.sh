@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source /home/rklak/scripts/lib/colors.sh
+source /home/radoslaw-klak/scripts/lib/colors.sh
 
 # Function to change directory in all tmux panes except the current one
 change_directory() {

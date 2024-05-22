@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source /home/rklak/scripts/lib/colors.sh
+source /home/radoslaw-klak/scripts/lib/colors.sh
 
 ./init.sh
 
@@ -14,11 +14,11 @@ sed --in-place='' 's/sleighzy\/keycloak:16.1.0-arm64/jboss\/keycloak:10.0.2/' do
 
 # echo_infot "ensure build owner"
 # owner_build=$(stat -c "%U" build)
-# if [[ "$owner_build" != "rklak" ]]; then
-# 	echo_info -n "Build catalog has wrong owner. Changing from " && echo_error -n "$owner_build" && echo_info " to rklak…"
-# 	sudo chown rklak build
+# if [[ "$owner_build" != "radoslaw-klak" ]]; then
+# 	echo_info -n "Build catalog has wrong owner. Changing from " && echo_error -n "$owner_build" && echo_info " to radoslaw-klak…"
+# 	sudo chown radoslaw-klak build
 # else
-# 	echo_info "Build catalog already with rklak owner"
+# 	echo_info "Build catalog already with radoslaw-klak owner"
 # fi
 
 echo_success "Local override ready! Lets jump in!"

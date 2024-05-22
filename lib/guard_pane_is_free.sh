@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source /home/rklak/scripts//lib/colors.sh
+source /home/radoslaw-klak/scripts//lib/colors.sh
 
 pane_id="$1"
 current_command_in_pane=$(tmux display-message -p -t "$pane_id".0 '#{pane_current_command}')

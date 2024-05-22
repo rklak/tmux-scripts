@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source /home/rklak/scripts/lib/colors.sh
+source /home/radoslaw-klak/scripts/lib/colors.sh
 
 elapsed=0
 timeout=20
