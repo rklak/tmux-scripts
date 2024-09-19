@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source /home/radoslaw-klak/scripts/lib/colors.sh
+source "$HOME/scripts/lib/colors.sh"
 
 nvm i
 npm i

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-source /home/radoslaw-klak/scripts/lib/colors.sh
-source /home/radoslaw-klak/scripts/lib/functions.sh
+source "$HOME/scripts/lib/colors.sh"
+source "$HOME/scripts/lib/functions.sh"
 
 working_directory="${1:-$(pwd)}"
 

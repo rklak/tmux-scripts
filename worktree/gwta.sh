@@ -2,8 +2,8 @@
 
 # Check if the argument is provided
 if [ -z "$1" ]; then
-	echo_info "Usage: $0 <branch_name>"
-	exit 1
+  echo_info "Usage: $0 <branch_name>"
+  exit 1
 fi
 
 success=$(tput setaf 34)
@@ -18,10 +18,10 @@ branch_directory=${branch_name//\//-}
 echo "Checking branch at remote"
 
 if git worktree add "$branch_directory" "$branch_name" >/dev/null 2>&1; then
-	echo "Yeah, so from remote…"
+  echo "Yeah, so from remote…"
 else
-	echo "Nope, so from local develop"
-	git worktree add -b "$branch_name" "$branch_directory" origin/develop
+  echo "Nope, so from local develop"
+  git worktree add -b "$branch_name" "$branch_directory" origin/develop
 fi
 
 cd "$branch_directory" || (echo_error "Directory branch doesn't exists: ${branch_directory}" && exit 1)
