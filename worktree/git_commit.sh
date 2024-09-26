@@ -1,21 +1,15 @@
 #!/usr/bin/env bash
 
 source "$HOME/scripts/lib/colors.sh"
+source "$HOME/scripts/worktree/git_jira_issue.sh"
 
-current_branch=$(git rev-parse --abbrev-ref HEAD)
-
-issue_regex="[a-zA-Z]+-[0-9]+"
-
-issue=""
-if [[ $current_branch =~ $issue_regex ]]; then
-  issue="${BASH_REMATCH[0]}"
-fi
-
+issue=$(git_jira_issue)
 if [[ -z $issue ]]; then
   echo_warn "Can't find issue, aborting"
   exit 1
 fi
 
+current_branch=$(git rev-parse --abbrev-ref HEAD)
 commit_msg=""
 
 # first argument as an issue
@@ -39,11 +33,20 @@ if [[ -z $commit_msg ]]; then
   "feature")
     commit_msg="feat($issue): "
     ;;
+  "feat")
+    commit_msg="feat($issue): "
+    ;;
   "bugfix")
+    commit_msg="fix($issue): "
+    ;;
+  "fix")
     commit_msg="fix($issue): "
     ;;
   "hotfix")
     commit_msg="fix($issue): "
+    ;;
+  "refactor")
+    commit_msg="refactor($issue): "
     ;;
   *)
     echo_warn "It's something else"

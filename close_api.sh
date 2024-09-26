@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 source "$HOME/scripts/lib/colors.sh"
-ssource "$HOME/scripts/lib/functions.sh"
+source "$HOME/scripts/lib/functions.sh"
 
 guard_switch_to_other_pane "lapi:build|lapi:watch"
 
